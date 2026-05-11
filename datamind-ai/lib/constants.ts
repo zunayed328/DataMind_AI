@@ -1,0 +1,460 @@
+export const siteConfig = {
+  name: "DataMind AI",
+  description:
+    "LLM-Powered Intelligent Data Analysis Platform — Upload any dataset, get AI-powered insights, automated ML predictions, and beautiful reports in seconds.",
+  url: "https://datamind-ai.vercel.app",
+  ogImage: "/og-image.png",
+  links: {
+    github: "https://github.com/datamind-ai",
+    linkedin: "https://linkedin.com/in/datamind-ai",
+    twitter: "https://twitter.com/datamind_ai",
+  },
+};
+
+export const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/features" },
+  { name: "Demo", href: "/demo" },
+  { name: "Roadmap", href: "/roadmap" },
+  { name: "Tech Stack", href: "/tech-stack" },
+  { name: "Docs", href: "/docs" },
+  { name: "Research", href: "/research" },
+];
+
+export const features = [
+  {
+    icon: "📁",
+    title: "Smart Data Upload",
+    description: "CSV, Excel, JSON, PDF. Auto-detect & validate with intelligent schema inference.",
+    color: "blue",
+    gradient: "from-blue-500 to-blue-600",
+  },
+  {
+    icon: "🔍",
+    title: "Auto EDA Engine",
+    description: "Complete analysis in 30 seconds. Charts, stats, outliers, and correlations.",
+    color: "purple",
+    gradient: "from-purple-500 to-purple-600",
+  },
+  {
+    icon: "💬",
+    title: "Chat With Data",
+    description: "Ask questions in English. LangChain + GPT-4 powered natural language queries.",
+    color: "green",
+    gradient: "from-green-500 to-green-600",
+  },
+  {
+    icon: "🤖",
+    title: "AutoML Pipeline",
+    description: "Trains 5+ models. Selects best performer. Makes accurate predictions.",
+    color: "orange",
+    gradient: "from-orange-500 to-orange-600",
+  },
+  {
+    icon: "📚",
+    title: "RAG Documents",
+    description: "Upload PDFs. Chat with them. FAISS vector database for semantic search.",
+    color: "pink",
+    gradient: "from-pink-500 to-pink-600",
+  },
+  {
+    icon: "📄",
+    title: "AI Report Generator",
+    description: "LLM writes executive summaries. Professional PDF export ready.",
+    color: "yellow",
+    gradient: "from-yellow-500 to-yellow-600",
+  },
+  {
+    icon: "📈",
+    title: "Time Series Forecast",
+    description: "Prophet model predicts trends. Interactive charts with confidence intervals.",
+    color: "cyan",
+    gradient: "from-cyan-500 to-cyan-600",
+  },
+  {
+    icon: "☁️",
+    title: "Cloud Deployment",
+    description: "Docker + AWS + CI/CD. Production-ready infrastructure out of the box.",
+    color: "indigo",
+    gradient: "from-indigo-500 to-violet-600",
+  },
+];
+
+export const problems = [
+  {
+    icon: "❌",
+    title: "Manual Analysis Takes Days",
+    description: "Data scientists spend 80% of their time on repetitive cleaning and analysis tasks.",
+    stat: "80% time wasted",
+  },
+  {
+    icon: "❌",
+    title: "Technical Skill Barrier",
+    description: "73% of business users can't analyze data without developer assistance.",
+    stat: "73% blocked users",
+  },
+  {
+    icon: "❌",
+    title: "Fragmented Tools",
+    description: "Teams juggle 5+ different tools just to complete a single analysis workflow.",
+    stat: "5+ tools needed",
+  },
+  {
+    icon: "❌",
+    title: "ML Deployment Complexity",
+    description: "Getting models to production requires weeks of DevOps and infrastructure work.",
+    stat: "Weeks of setup",
+  },
+];
+
+export const solutions = [
+  {
+    icon: "✅",
+    title: "AI Analyzes in Seconds",
+    description: "Complete exploratory data analysis generated automatically in under 30 seconds.",
+    benefit: "960x faster",
+  },
+  {
+    icon: "✅",
+    title: "Talk to Your Data",
+    description: "Ask questions in plain English and get instant, accurate answers from your data.",
+    benefit: "Zero coding needed",
+  },
+  {
+    icon: "✅",
+    title: "All-in-One Platform",
+    description: "Upload, analyze, predict, and report — everything in a single unified platform.",
+    benefit: "1 tool for everything",
+  },
+  {
+    icon: "✅",
+    title: "One-Click Deployment",
+    description: "Docker containers + AWS infrastructure, ready for production in minutes.",
+    benefit: "Minutes, not weeks",
+  },
+];
+
+export const roadmapPhases = [
+  {
+    phase: 1,
+    months: "Month 1-2",
+    title: "Foundation",
+    icon: "🏗️",
+    color: "blue",
+    gradient: "from-blue-500 to-blue-600",
+    items: [
+      "Python & ML mastery",
+      "Docker deep dive",
+      "FastAPI backend",
+      "LLM fundamentals",
+      "AWS cloud setup",
+    ],
+    progress: 20,
+    status: "Start Here →",
+  },
+  {
+    phase: 2,
+    months: "Month 3-6",
+    title: "Core Build",
+    icon: "⚙️",
+    color: "purple",
+    gradient: "from-purple-500 to-purple-600",
+    items: [
+      "Smart data upload",
+      "Auto EDA engine",
+      "LLM integration",
+      "ML auto-pipeline",
+      "Data chat system",
+      "Dashboard UI",
+    ],
+    progress: 60,
+    status: "Build Mode →",
+  },
+  {
+    phase: 3,
+    months: "Month 7-8",
+    title: "Advanced AI",
+    icon: "🚀",
+    color: "green",
+    gradient: "from-green-500 to-green-600",
+    items: [
+      "RAG system",
+      "Time series forecast",
+      "Anomaly detection",
+      "Docker production",
+      "CI/CD pipeline",
+      "Monitoring setup",
+    ],
+    progress: 80,
+    status: "Level Up →",
+  },
+  {
+    phase: 4,
+    months: "Month 9",
+    title: "Polish",
+    icon: "🧪",
+    color: "orange",
+    gradient: "from-orange-500 to-orange-600",
+    items: [
+      "Unit testing (pytest)",
+      "Load testing (Locust)",
+      "Research paper",
+      "Full documentation",
+      "Security audit",
+    ],
+    progress: 90,
+    status: "Refine →",
+  },
+  {
+    phase: 5,
+    months: "Month 10",
+    title: "Launch 🚀",
+    icon: "🎯",
+    color: "pink",
+    gradient: "from-pink-500 to-rose-600",
+    items: [
+      "AWS production deploy",
+      "Custom domain + HTTPS",
+      "Demo video recording",
+      "Final presentation",
+      "Job applications!",
+    ],
+    progress: 100,
+    status: "🎉 Ship It!",
+  },
+];
+
+export const techStacks = [
+  {
+    title: "AI & LLM Stack",
+    icon: "🤖",
+    gradient: "from-blue-500 to-purple-600",
+    techs: [
+      "LangChain",
+      "GPT-4",
+      "HuggingFace",
+      "LLaMA 2",
+      "FAISS",
+      "Prompt Eng.",
+      "LangGraph",
+      "spaCy",
+      "Embeddings",
+    ],
+  },
+  {
+    title: "Data Science & ML",
+    icon: "📊",
+    gradient: "from-green-500 to-cyan-600",
+    techs: [
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "XGBoost",
+      "TensorFlow",
+      "PyTorch",
+      "Prophet",
+      "Plotly",
+      "MLflow",
+      "ydata-profiling",
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: "☁️",
+    gradient: "from-orange-500 to-red-600",
+    techs: [
+      "Docker",
+      "Docker Compose",
+      "AWS EC2",
+      "AWS S3",
+      "GitHub Actions",
+      "Nginx",
+      "Grafana",
+      "Prometheus",
+      "Redis",
+      "PostgreSQL",
+    ],
+  },
+  {
+    title: "Backend & API",
+    icon: "⚙️",
+    gradient: "from-purple-500 to-pink-600",
+    techs: [
+      "FastAPI",
+      "Python 3.11",
+      "JWT Auth",
+      "SQLAlchemy",
+      "Celery",
+      "WebSockets",
+      "Pydantic",
+      "Pytest",
+      "Alembic",
+    ],
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Ahmed R.",
+    role: "CSE Graduate",
+    company: "Now at Google",
+    quote:
+      "This project helped me land my ML Engineer job at Google! The architecture and AI integration are top-notch.",
+    rating: 5,
+  },
+  {
+    name: "Dr. Sarah M.",
+    role: "Professor",
+    company: "Stanford University",
+    quote:
+      "The best capstone project I've seen in 10 years of teaching. Exceptional engineering and presentation.",
+    rating: 5,
+  },
+  {
+    name: "Michael T.",
+    role: "CTO",
+    company: "AI Startup",
+    quote:
+      "DataMind AI saved our startup 3 months of development time. We integrated it directly into our pipeline.",
+    rating: 5,
+  },
+];
+
+export const performanceMetrics = [
+  {
+    icon: "⚡",
+    value: 5,
+    unit: "sec",
+    label: "File Upload",
+    comparison: "10x faster than traditional tools",
+    prefix: "<",
+  },
+  {
+    icon: "🔍",
+    value: 30,
+    unit: "sec",
+    label: "EDA Generation",
+    comparison: "960x faster than manual analysis",
+    prefix: "<",
+  },
+  {
+    icon: "🤖",
+    value: 15,
+    unit: "sec",
+    label: "AI Insights",
+    comparison: "Instant business intelligence",
+    prefix: "<",
+  },
+  {
+    icon: "📈",
+    value: 5,
+    unit: "min",
+    label: "ML Training",
+    comparison: "Auto-optimized models",
+    prefix: "<",
+  },
+  {
+    icon: "💬",
+    value: 5,
+    unit: "sec",
+    label: "Chat Response",
+    comparison: "Real-time conversation",
+    prefix: "<",
+  },
+  {
+    icon: "📊",
+    value: 50,
+    unit: "+",
+    label: "Concurrent Users",
+    comparison: "Scalable architecture",
+    prefix: "",
+  },
+];
+
+export const careerRoles = [
+  {
+    icon: "🤖",
+    title: "LLM Engineer",
+    salary: "$110K-$150K",
+    demand: "🔥🔥🔥",
+    skills: ["LangChain", "GPT-4", "RAG", "Prompt Engineering"],
+  },
+  {
+    icon: "📊",
+    title: "ML Engineer",
+    salary: "$90K-$130K",
+    demand: "🔥🔥🔥",
+    skills: ["Scikit-learn", "TensorFlow", "MLOps", "Python"],
+  },
+  {
+    icon: "🔬",
+    title: "Data Scientist",
+    salary: "$85K-$120K",
+    demand: "🔥🔥",
+    skills: ["Pandas", "Statistics", "ML", "Visualization"],
+  },
+  {
+    icon: "☁️",
+    title: "AI Cloud Engineer",
+    salary: "$95K-$135K",
+    demand: "🔥🔥🔥",
+    skills: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+  },
+  {
+    icon: "⚡",
+    title: "Backend AI Dev",
+    salary: "$85K-$120K",
+    demand: "🔥🔥",
+    skills: ["FastAPI", "PostgreSQL", "Redis", "WebSockets"],
+  },
+  {
+    icon: "🔍",
+    title: "AI Research Eng",
+    salary: "$120K-$180K",
+    demand: "🔥🔥🔥",
+    skills: ["PyTorch", "NLP", "Transformers", "Research"],
+  },
+];
+
+export const demoDatasets = [
+  {
+    id: "ecommerce",
+    name: "E-commerce Sales",
+    icon: "📊",
+    rows: 500,
+    columns: 8,
+    description: "Online retail transaction data",
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare Patients",
+    icon: "🏥",
+    rows: 300,
+    columns: 12,
+    description: "Patient health records",
+  },
+  {
+    id: "financial",
+    name: "Financial Transactions",
+    icon: "💰",
+    rows: 1000,
+    columns: 10,
+    description: "Banking transaction logs",
+  },
+  {
+    id: "hr",
+    name: "HR Employee Data",
+    icon: "👥",
+    rows: 250,
+    columns: 9,
+    description: "Employee performance data",
+  },
+  {
+    id: "cars",
+    name: "Car Sales Dataset",
+    icon: "🚗",
+    rows: 400,
+    columns: 7,
+    description: "Automotive sales records",
+  },
+];
