@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Youtube, Sparkles, ArrowUp, Mail } from "lucide-react";
+import { ExternalLink, Globe, MessageCircle, Video, Sparkles, ArrowUp, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -29,10 +29,10 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Github, href: "https://github.com/datamind-ai", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  { icon: ExternalLink, href: "https://github.com/datamind-ai", label: "GitHub" },
+  { icon: Globe, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: MessageCircle, href: "https://twitter.com", label: "Twitter" },
+  { icon: Video, href: "https://youtube.com", label: "YouTube" },
 ];
 
 export function Footer() {

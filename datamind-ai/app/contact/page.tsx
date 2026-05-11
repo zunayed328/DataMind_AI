@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Send, Mail, MapPin, ExternalLink, Globe, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
                   <p className="text-sm font-medium text-white/60 mb-3">Follow Us</p>
                   <div className="flex gap-3">
-                    {[{ icon: <Github className="w-4 h-4" />, href: "#" }, { icon: <Linkedin className="w-4 h-4" />, href: "#" }, { icon: <Twitter className="w-4 h-4" />, href: "#" }].map((s, i) => (
+                    {[{ icon: <ExternalLink className="w-4 h-4" />, href: "#" }, { icon: <Globe className="w-4 h-4" />, href: "#" }, { icon: <MessageCircle className="w-4 h-4" />, href: "#" }].map((s, i) => (
                       <a key={i} href={s.href} className="w-10 h-10 rounded-lg border border-white/[0.08] flex items-center justify-center text-white/40 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all">
                         {s.icon}
                       </a>
