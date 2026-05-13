@@ -3,21 +3,18 @@
 import { motion } from "framer-motion";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations/fade-in";
 import { problems, solutions } from "@/lib/constants";
-import { ArrowRight } from "lucide-react";
+import { AlertCircle, Zap } from "lucide-react";
 
 export function ProblemSolutionSection() {
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #0A0A0F 0%, #15151F 100%)" }} />
+      <div className="relative max-w-[1280px] mx-auto px-6 lg:px-8">
         <FadeIn className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
-            <span className="text-white">From </span>
-            <span className="text-red-400">Problem</span>
-            <span className="text-white"> to </span>
-            <span className="text-green-400">Solution</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.025em] leading-[1.1]">
+            <span className="text-gradient">Built for the modern data team</span>
           </h2>
-          <p className="mt-4 text-white/40 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-text-secondary text-lg max-w-2xl mx-auto">
             See how DataMind AI transforms the way you work with data
           </p>
         </FadeIn>
@@ -26,29 +23,29 @@ export function ProblemSolutionSection() {
           {/* Problems */}
           <StaggerContainer className="space-y-4">
             <FadeIn>
-              <h3 className="text-xl font-semibold text-red-400 mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-sm">
-                  ❌
-                </span>
-                The Problem
+              <h3 className="text-[11px] font-medium text-text-tertiary uppercase tracking-[0.08em] mb-6">
+                The old way
               </h3>
             </FadeIn>
             {problems.map((problem, i) => (
               <StaggerItem key={i}>
                 <motion.div
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 hover:border-red-500/20 hover:bg-red-500/[0.03] transition-all duration-300"
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="group rounded-xl border border-white/[0.06] bg-bg-tertiary p-6 hover:border-white/[0.12] transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <span className="text-2xl flex-shrink-0 mt-0.5">{problem.icon}</span>
+                    <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center flex-shrink-0">
+                      <AlertCircle className="w-4 h-4 text-text-disabled" />
+                    </div>
                     <div className="flex-1">
-                      <h4 className="text-base font-semibold text-white mb-1">
+                      <h4 className="text-[15px] font-semibold text-white mb-1">
                         {problem.title}
                       </h4>
-                      <p className="text-sm text-white/40 leading-relaxed">
+                      <p className="text-sm text-text-secondary leading-relaxed">
                         {problem.description}
                       </p>
-                      <span className="inline-block mt-2 text-xs font-medium text-red-400/80 px-2 py-0.5 rounded-full bg-red-500/10 border border-red-500/20">
+                      <span className="inline-block mt-3 text-[11px] font-medium text-text-tertiary px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/[0.06]">
                         {problem.stat}
                       </span>
                     </div>
@@ -59,44 +56,36 @@ export function ProblemSolutionSection() {
           </StaggerContainer>
 
           {/* Center Divider */}
-          <div className="hidden lg:flex flex-col items-center justify-center h-full py-20">
-            <div className="w-px h-full bg-gradient-to-b from-red-500/20 via-white/10 to-green-500/20 relative">
-              <motion.div
-                animate={{ y: [0, 200, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25"
-              >
-                <ArrowRight className="w-5 h-5 text-white" />
-              </motion.div>
-            </div>
+          <div className="hidden lg:flex flex-col items-center justify-center h-full py-16">
+            <div className="w-px h-full bg-gradient-to-b from-white/[0.04] via-white/[0.08] to-white/[0.04]" />
           </div>
 
           {/* Solutions */}
-          <StaggerContainer staggerDelay={0.12} className="space-y-4">
+          <StaggerContainer staggerDelay={0.1} className="space-y-4">
             <FadeIn>
-              <h3 className="text-xl font-semibold text-green-400 mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center text-sm">
-                  ✅
-                </span>
-                Our Solution
+              <h3 className="text-[11px] font-medium text-text-tertiary uppercase tracking-[0.08em] mb-6">
+                The DataMind way
               </h3>
             </FadeIn>
             {solutions.map((solution, i) => (
               <StaggerItem key={i}>
                 <motion.div
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 hover:border-green-500/20 hover:bg-green-500/[0.03] transition-all duration-300"
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="group rounded-xl border border-white/[0.06] bg-bg-tertiary p-6 hover:border-accent/[0.2] transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <span className="text-2xl flex-shrink-0 mt-0.5">{solution.icon}</span>
+                    <div className="w-9 h-9 rounded-lg bg-accent/[0.08] border border-accent/[0.12] flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-4 h-4 text-accent-light" />
+                    </div>
                     <div className="flex-1">
-                      <h4 className="text-base font-semibold text-white mb-1">
+                      <h4 className="text-[15px] font-semibold text-white mb-1">
                         {solution.title}
                       </h4>
-                      <p className="text-sm text-white/40 leading-relaxed">
+                      <p className="text-sm text-text-secondary leading-relaxed">
                         {solution.description}
                       </p>
-                      <span className="inline-block mt-2 text-xs font-medium text-green-400/80 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20">
+                      <span className="inline-block mt-3 text-[11px] font-medium text-accent-light px-2.5 py-1 rounded-md bg-accent/[0.06] border border-accent/[0.12]">
                         {solution.benefit}
                       </span>
                     </div>
