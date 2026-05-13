@@ -140,7 +140,7 @@ export function DemoSection() {
                 <div className="space-y-1">
                   {Object.entries(options).map(([key, val]) => (
                     <label key={key} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/[0.03] cursor-pointer transition-colors">
-                      <input type="checkbox" checked={val} onChange={() => setOptions(p => ({ ...p, [key]: !p[key] }))}
+                      <input type="checkbox" checked={val} onChange={() => setOptions(p => ({ ...p, [key]: !p[key as keyof typeof options] }))}
                         className="w-4 h-4 rounded border-white/20 bg-white/[0.03] accent-accent" />
                       <span className="text-sm text-text-secondary">{key === "eda" ? "Auto EDA" : key === "ml" ? "ML Prediction" : key === "timeseries" ? "Time Series" : key === "insights" ? "Generate AI Insights" : key === "anomalies" ? "Detect Anomalies" : "Correlation Analysis"}</span>
                     </label>

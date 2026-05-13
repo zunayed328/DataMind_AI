@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Menu, X, Github } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -95,7 +95,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 text-[14px] font-medium text-text-secondary border border-white/[0.1] rounded-lg hover:bg-white/[0.05] hover:text-white transition-all duration-200"
               >
-                <Github className="w-[14px] h-[14px]" />
+                <ExternalLink className="w-[14px] h-[14px]" />
                 <span>Star on GitHub</span>
               </a>
               <Link
@@ -177,7 +177,7 @@ export function Navbar() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 text-[14px] font-medium text-text-secondary border border-white/[0.1] rounded-lg hover:text-white transition-all"
                 >
-                  <Github className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4" />
                   Star on GitHub
                 </a>
                 <Link
