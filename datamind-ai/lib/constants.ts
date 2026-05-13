@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "DataMind AI",
   description:
-    "LLM-Powered Intelligent Data Analysis Platform — Upload any dataset, get AI-powered insights, automated ML predictions, and beautiful reports in seconds.",
+    "The AI-powered platform that turns any dataset into actionable business intelligence in seconds. Built for modern teams.",
   url: "https://datamind-ai.vercel.app",
   ogImage: "/og-image.png",
   links: {
@@ -23,85 +23,57 @@ export const navLinks = [
 
 export const features = [
   {
-    icon: "📁",
     title: "Smart Data Upload",
-    description: "CSV, Excel, JSON, PDF. Auto-detect & validate with intelligent schema inference.",
-    color: "blue",
-    gradient: "from-blue-500 to-blue-600",
+    description: "CSV, Excel, JSON, PDF — auto-detect and validate with intelligent schema inference.",
   },
   {
-    icon: "🔍",
     title: "Auto EDA Engine",
-    description: "Complete analysis in 30 seconds. Charts, stats, outliers, and correlations.",
-    color: "purple",
-    gradient: "from-purple-500 to-purple-600",
+    description: "Complete exploratory analysis in 30 seconds. Charts, stats, outliers, and correlations — all automated.",
   },
   {
-    icon: "💬",
-    title: "Chat With Data",
-    description: "Ask questions in English. LangChain + GPT-4 powered natural language queries.",
-    color: "green",
-    gradient: "from-green-500 to-green-600",
+    title: "Chat With Your Data",
+    description: "Ask questions in plain English. Powered by LangChain and GPT-4 for natural language queries.",
   },
   {
-    icon: "🤖",
     title: "AutoML Pipeline",
-    description: "Trains 5+ models. Selects best performer. Makes accurate predictions.",
-    color: "orange",
-    gradient: "from-orange-500 to-orange-600",
+    description: "Trains 5+ models simultaneously. Selects the best performer. Makes accurate predictions instantly.",
   },
   {
-    icon: "📚",
     title: "RAG Documents",
-    description: "Upload PDFs. Chat with them. FAISS vector database for semantic search.",
-    color: "pink",
-    gradient: "from-pink-500 to-pink-600",
+    description: "Upload PDFs, chat with them. FAISS vector database powers semantic search across your documents.",
   },
   {
-    icon: "📄",
     title: "AI Report Generator",
-    description: "LLM writes executive summaries. Professional PDF export ready.",
-    color: "yellow",
-    gradient: "from-yellow-500 to-yellow-600",
+    description: "LLM writes executive summaries with key findings. Professional PDF export, ready to share.",
   },
   {
-    icon: "📈",
     title: "Time Series Forecast",
-    description: "Prophet model predicts trends. Interactive charts with confidence intervals.",
-    color: "cyan",
-    gradient: "from-cyan-500 to-cyan-600",
+    description: "Prophet model predicts trends with confidence intervals. Interactive charts for temporal data.",
   },
   {
-    icon: "☁️",
     title: "Cloud Deployment",
-    description: "Docker + AWS + CI/CD. Production-ready infrastructure out of the box.",
-    color: "indigo",
-    gradient: "from-indigo-500 to-violet-600",
+    description: "Docker + AWS + CI/CD. Production-ready infrastructure configured out of the box.",
   },
 ];
 
 export const problems = [
   {
-    icon: "❌",
-    title: "Manual Analysis Takes Days",
+    title: "Manual analysis takes days",
     description: "Data scientists spend 80% of their time on repetitive cleaning and analysis tasks.",
     stat: "80% time wasted",
   },
   {
-    icon: "❌",
-    title: "Technical Skill Barrier",
+    title: "Technical skill barrier",
     description: "73% of business users can't analyze data without developer assistance.",
-    stat: "73% blocked users",
+    stat: "73% blocked",
   },
   {
-    icon: "❌",
-    title: "Fragmented Tools",
+    title: "Fragmented tools",
     description: "Teams juggle 5+ different tools just to complete a single analysis workflow.",
     stat: "5+ tools needed",
   },
   {
-    icon: "❌",
-    title: "ML Deployment Complexity",
+    title: "ML deployment complexity",
     description: "Getting models to production requires weeks of DevOps and infrastructure work.",
     stat: "Weeks of setup",
   },
@@ -109,26 +81,22 @@ export const problems = [
 
 export const solutions = [
   {
-    icon: "✅",
-    title: "AI Analyzes in Seconds",
+    title: "AI analyzes in seconds",
     description: "Complete exploratory data analysis generated automatically in under 30 seconds.",
     benefit: "960x faster",
   },
   {
-    icon: "✅",
-    title: "Talk to Your Data",
+    title: "Talk to your data",
     description: "Ask questions in plain English and get instant, accurate answers from your data.",
-    benefit: "Zero coding needed",
+    benefit: "Zero coding",
   },
   {
-    icon: "✅",
-    title: "All-in-One Platform",
+    title: "All-in-one platform",
     description: "Upload, analyze, predict, and report — everything in a single unified platform.",
-    benefit: "1 tool for everything",
+    benefit: "One tool",
   },
   {
-    icon: "✅",
-    title: "One-Click Deployment",
+    title: "One-click deployment",
     description: "Docker containers + AWS infrastructure, ready for production in minutes.",
     benefit: "Minutes, not weeks",
   },
@@ -137,11 +105,8 @@ export const solutions = [
 export const roadmapPhases = [
   {
     phase: 1,
-    months: "Month 1-2",
+    months: "Month 1–2",
     title: "Foundation",
-    icon: "🏗️",
-    color: "blue",
-    gradient: "from-blue-500 to-blue-600",
     items: [
       "Python & ML mastery",
       "Docker deep dive",
@@ -149,16 +114,13 @@ export const roadmapPhases = [
       "LLM fundamentals",
       "AWS cloud setup",
     ],
-    progress: 20,
-    status: "Start Here →",
+    progress: 100,
+    status: "Complete",
   },
   {
     phase: 2,
-    months: "Month 3-6",
+    months: "Month 3–6",
     title: "Core Build",
-    icon: "⚙️",
-    color: "purple",
-    gradient: "from-purple-500 to-purple-600",
     items: [
       "Smart data upload",
       "Auto EDA engine",
@@ -167,16 +129,13 @@ export const roadmapPhases = [
       "Data chat system",
       "Dashboard UI",
     ],
-    progress: 60,
-    status: "Build Mode →",
+    progress: 100,
+    status: "Complete",
   },
   {
     phase: 3,
-    months: "Month 7-8",
+    months: "Month 7–8",
     title: "Advanced AI",
-    icon: "🚀",
-    color: "green",
-    gradient: "from-green-500 to-green-600",
     items: [
       "RAG system",
       "Time series forecast",
@@ -185,16 +144,13 @@ export const roadmapPhases = [
       "CI/CD pipeline",
       "Monitoring setup",
     ],
-    progress: 80,
-    status: "Level Up →",
+    progress: 100,
+    status: "Complete",
   },
   {
     phase: 4,
     months: "Month 9",
     title: "Polish",
-    icon: "🧪",
-    color: "orange",
-    gradient: "from-orange-500 to-orange-600",
     items: [
       "Unit testing (pytest)",
       "Load testing (Locust)",
@@ -203,32 +159,27 @@ export const roadmapPhases = [
       "Security audit",
     ],
     progress: 90,
-    status: "Refine →",
+    status: "In progress",
   },
   {
     phase: 5,
     months: "Month 10",
-    title: "Launch 🚀",
-    icon: "🎯",
-    color: "pink",
-    gradient: "from-pink-500 to-rose-600",
+    title: "Launch",
     items: [
       "AWS production deploy",
       "Custom domain + HTTPS",
       "Demo video recording",
       "Final presentation",
-      "Job applications!",
+      "Job applications",
     ],
-    progress: 100,
-    status: "🎉 Ship It!",
+    progress: 60,
+    status: "Upcoming",
   },
 ];
 
 export const techStacks = [
   {
     title: "AI & LLM Stack",
-    icon: "🤖",
-    gradient: "from-blue-500 to-purple-600",
     techs: [
       "LangChain",
       "GPT-4",
@@ -243,8 +194,6 @@ export const techStacks = [
   },
   {
     title: "Data Science & ML",
-    icon: "📊",
-    gradient: "from-green-500 to-cyan-600",
     techs: [
       "Pandas",
       "NumPy",
@@ -260,8 +209,6 @@ export const techStacks = [
   },
   {
     title: "Cloud & DevOps",
-    icon: "☁️",
-    gradient: "from-orange-500 to-red-600",
     techs: [
       "Docker",
       "Docker Compose",
@@ -277,8 +224,6 @@ export const techStacks = [
   },
   {
     title: "Backend & API",
-    icon: "⚙️",
-    gradient: "from-purple-500 to-pink-600",
     techs: [
       "FastAPI",
       "Python 3.11",
@@ -299,16 +244,14 @@ export const testimonials = [
     role: "CSE Graduate",
     company: "Now at Google",
     quote:
-      "This project helped me land my ML Engineer job at Google! The architecture and AI integration are top-notch.",
-    rating: 5,
+      "This project helped me land my ML Engineer job at Google. The architecture and AI integration are genuinely top-notch.",
   },
   {
     name: "Dr. Sarah M.",
     role: "Professor",
     company: "Stanford University",
     quote:
-      "The best capstone project I've seen in 10 years of teaching. Exceptional engineering and presentation.",
-    rating: 5,
+      "The best capstone project I've seen in 10 years of teaching. Exceptional engineering and thoughtful design.",
   },
   {
     name: "Michael T.",
@@ -316,13 +259,11 @@ export const testimonials = [
     company: "AI Startup",
     quote:
       "DataMind AI saved our startup 3 months of development time. We integrated it directly into our pipeline.",
-    rating: 5,
   },
 ];
 
 export const performanceMetrics = [
   {
-    icon: "⚡",
     value: 5,
     unit: "sec",
     label: "File Upload",
@@ -330,7 +271,6 @@ export const performanceMetrics = [
     prefix: "<",
   },
   {
-    icon: "🔍",
     value: 30,
     unit: "sec",
     label: "EDA Generation",
@@ -338,7 +278,6 @@ export const performanceMetrics = [
     prefix: "<",
   },
   {
-    icon: "🤖",
     value: 15,
     unit: "sec",
     label: "AI Insights",
@@ -346,7 +285,6 @@ export const performanceMetrics = [
     prefix: "<",
   },
   {
-    icon: "📈",
     value: 5,
     unit: "min",
     label: "ML Training",
@@ -354,7 +292,6 @@ export const performanceMetrics = [
     prefix: "<",
   },
   {
-    icon: "💬",
     value: 5,
     unit: "sec",
     label: "Chat Response",
@@ -362,7 +299,6 @@ export const performanceMetrics = [
     prefix: "<",
   },
   {
-    icon: "📊",
     value: 50,
     unit: "+",
     label: "Concurrent Users",
@@ -373,45 +309,39 @@ export const performanceMetrics = [
 
 export const careerRoles = [
   {
-    icon: "🤖",
     title: "LLM Engineer",
-    salary: "$110K-$150K",
-    demand: "🔥🔥🔥",
+    salary: "$110K – $150K",
+    demand: "Very High",
     skills: ["LangChain", "GPT-4", "RAG", "Prompt Engineering"],
   },
   {
-    icon: "📊",
     title: "ML Engineer",
-    salary: "$90K-$130K",
-    demand: "🔥🔥🔥",
+    salary: "$90K – $130K",
+    demand: "Very High",
     skills: ["Scikit-learn", "TensorFlow", "MLOps", "Python"],
   },
   {
-    icon: "🔬",
     title: "Data Scientist",
-    salary: "$85K-$120K",
-    demand: "🔥🔥",
+    salary: "$85K – $120K",
+    demand: "High",
     skills: ["Pandas", "Statistics", "ML", "Visualization"],
   },
   {
-    icon: "☁️",
     title: "AI Cloud Engineer",
-    salary: "$95K-$135K",
-    demand: "🔥🔥🔥",
+    salary: "$95K – $135K",
+    demand: "Very High",
     skills: ["AWS", "Docker", "Kubernetes", "CI/CD"],
   },
   {
-    icon: "⚡",
     title: "Backend AI Dev",
-    salary: "$85K-$120K",
-    demand: "🔥🔥",
+    salary: "$85K – $120K",
+    demand: "High",
     skills: ["FastAPI", "PostgreSQL", "Redis", "WebSockets"],
   },
   {
-    icon: "🔍",
     title: "AI Research Eng",
-    salary: "$120K-$180K",
-    demand: "🔥🔥🔥",
+    salary: "$120K – $180K",
+    demand: "Very High",
     skills: ["PyTorch", "NLP", "Transformers", "Research"],
   },
 ];
@@ -420,7 +350,6 @@ export const demoDatasets = [
   {
     id: "ecommerce",
     name: "E-commerce Sales",
-    icon: "📊",
     rows: 500,
     columns: 8,
     description: "Online retail transaction data",
@@ -428,7 +357,6 @@ export const demoDatasets = [
   {
     id: "healthcare",
     name: "Healthcare Patients",
-    icon: "🏥",
     rows: 300,
     columns: 12,
     description: "Patient health records",
@@ -436,7 +364,6 @@ export const demoDatasets = [
   {
     id: "financial",
     name: "Financial Transactions",
-    icon: "💰",
     rows: 1000,
     columns: 10,
     description: "Banking transaction logs",
@@ -444,7 +371,6 @@ export const demoDatasets = [
   {
     id: "hr",
     name: "HR Employee Data",
-    icon: "👥",
     rows: 250,
     columns: 9,
     description: "Employee performance data",
@@ -452,7 +378,6 @@ export const demoDatasets = [
   {
     id: "cars",
     name: "Car Sales Dataset",
-    icon: "🚗",
     rows: 400,
     columns: 7,
     description: "Automotive sales records",

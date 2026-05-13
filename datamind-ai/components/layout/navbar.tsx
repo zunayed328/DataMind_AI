@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Menu, X, ExternalLink, Sparkles } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,7 +14,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -28,37 +28,33 @@ export function Navbar() {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
-            ? "bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-xl shadow-black/20"
+            ? "bg-[rgba(10,10,15,0.7)] backdrop-blur-2xl border-b border-white/[0.06]"
             : "bg-transparent"
         )}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className={cn(
-              "flex items-center justify-between transition-all duration-500",
-              scrolled ? "h-16" : "h-20"
-            )}
-          >
+        <nav className="max-w-[1280px] mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25 group-hover:scale-110">
-                  <Sparkles className="w-5 h-5 text-white" />
-                </div>
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-40" />
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white" opacity="0.9"/>
+                  <path d="M2 17L12 22L22 17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+                  <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight">
+              <span className="text-[15px] font-semibold tracking-[-0.02em]">
                 <span className="text-white">DataMind</span>
-                <span className="gradient-text ml-0.5">AI</span>
+                <span className="text-gradient-brand ml-0.5">AI</span>
               </span>
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => {
                 const isActive =
                   pathname === link.href ||
@@ -68,17 +64,17 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "relative px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-300",
+                      "relative text-[14px] font-medium transition-colors duration-200",
                       isActive
                         ? "text-white"
-                        : "text-white/60 hover:text-white/90"
+                        : "text-text-secondary hover:text-white"
                     )}
                   >
                     {link.name}
                     {isActive && (
                       <motion.div
-                        layoutId="navbar-indicator"
-                        className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                        layoutId="navbar-dot"
+                        className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent"
                         transition={{
                           type: "spring",
                           stiffness: 350,
@@ -97,14 +93,14 @@ export function Navbar() {
                 href="https://github.com/datamind-ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 border border-white/10 rounded-lg hover:border-white/20 hover:text-white hover:bg-white/5 transition-all duration-300"
+                className="flex items-center gap-2 px-4 py-2 text-[14px] font-medium text-text-secondary border border-white/[0.1] rounded-lg hover:bg-white/[0.05] hover:text-white transition-all duration-200"
               >
-                <ExternalLink className="w-4 h-4" />
+                <Github className="w-[14px] h-[14px]" />
                 <span>Star on GitHub</span>
               </a>
               <Link
                 href="/demo"
-                className="relative px-5 py-2.5 text-sm font-semibold text-white rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 active:scale-95"
+                className="px-4 py-2 text-[14px] font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all duration-200 hover:-translate-y-px hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)]"
               >
                 Try Live Demo
               </Link>
@@ -113,13 +109,13 @@ export function Navbar() {
             {/* Mobile Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
+              className="lg:hidden p-2 text-text-secondary hover:text-white transition-colors"
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               )}
             </button>
           </div>
@@ -130,17 +126,23 @@ export function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
             <div
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
-            <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-[hsl(220,25%,5%)] border-l border-white/[0.06] p-6 pt-24 overflow-y-auto">
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-bg-secondary border-l border-white/[0.06] p-6 pt-24 overflow-y-auto"
+            >
               <div className="space-y-1">
                 {navLinks.map((link, i) => {
                   const isActive =
@@ -151,15 +153,15 @@ export function Navbar() {
                       key={link.href}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.05 }}
+                      transition={{ delay: i * 0.04 }}
                     >
                       <Link
                         href={link.href}
                         className={cn(
-                          "block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200",
+                          "block px-4 py-3 rounded-lg text-[15px] font-medium transition-all duration-200",
                           isActive
-                            ? "text-white bg-white/5 border-l-2 border-blue-500"
-                            : "text-white/60 hover:text-white hover:bg-white/5"
+                            ? "text-white bg-white/[0.05]"
+                            : "text-text-secondary hover:text-white hover:bg-white/[0.03]"
                         )}
                       >
                         {link.name}
@@ -173,19 +175,19 @@ export function Navbar() {
                   href="https://github.com/datamind-ai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-medium text-white/70 border border-white/10 rounded-lg hover:border-white/20 hover:text-white transition-all"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 text-[14px] font-medium text-text-secondary border border-white/[0.1] rounded-lg hover:text-white transition-all"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <Github className="w-4 h-4" />
                   Star on GitHub
                 </a>
                 <Link
                   href="/demo"
-                  className="block w-full text-center px-4 py-3 text-sm font-semibold text-white rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all"
+                  className="block w-full text-center px-4 py-3 text-[14px] font-medium text-black bg-white rounded-lg hover:bg-white/90 transition-all"
                 >
                   Try Live Demo
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

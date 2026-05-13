@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink, Globe, MessageCircle, Video, Sparkles, ArrowUp, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Youtube, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -11,14 +11,12 @@ const footerLinks = {
     { name: "Live Demo", href: "/demo" },
     { name: "Roadmap", href: "/roadmap" },
     { name: "Tech Stack", href: "/tech-stack" },
-    { name: "Pricing (Free)", href: "/#" },
   ],
   resources: [
     { name: "Documentation", href: "/docs" },
     { name: "API Reference", href: "/docs" },
     { name: "Research Paper", href: "/research" },
-    { name: "GitHub Repo", href: "https://github.com/datamind-ai" },
-    { name: "Community", href: "/#" },
+    { name: "GitHub", href: "https://github.com/datamind-ai" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/#" },
@@ -29,10 +27,10 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: ExternalLink, href: "https://github.com/datamind-ai", label: "GitHub" },
-  { icon: Globe, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: MessageCircle, href: "https://twitter.com", label: "Twitter" },
-  { icon: Video, href: "https://youtube.com", label: "YouTube" },
+  { icon: Github, href: "https://github.com/datamind-ai", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
 ];
 
 export function Footer() {
@@ -45,24 +43,28 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="relative border-t border-white/[0.06] bg-[hsl(220,25%,4%)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="relative border-t border-white/[0.06] bg-bg-secondary">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
-          <div className="lg:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
+          <div className="lg:col-span-2 space-y-5">
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white" opacity="0.9"/>
+                  <path d="M2 17L12 22L22 17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+                  <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                </svg>
               </div>
-              <span className="text-xl font-bold">
+              <span className="text-[15px] font-semibold tracking-[-0.02em]">
                 <span className="text-white">DataMind</span>
-                <span className="gradient-text ml-0.5">AI</span>
+                <span className="text-gradient-brand ml-0.5">AI</span>
               </span>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed max-w-sm">
-              LLM-Powered Intelligent Data Analysis Platform. Upload any dataset and get AI-powered insights, predictions, and beautiful reports in seconds.
+            <p className="text-text-tertiary text-sm leading-relaxed max-w-sm">
+              The AI-powered platform that turns any dataset into actionable business intelligence. Built for modern data teams.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {socials.map((social) => (
                 <a
                   key={social.label}
@@ -70,38 +72,23 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-lg border border-white/[0.08] flex items-center justify-center text-white/40 hover:text-white hover:border-white/20 hover:bg-white/5 transition-all duration-300"
+                  className="w-9 h-9 rounded-lg border border-white/[0.06] flex items-center justify-center text-text-tertiary hover:text-white hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-200"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
-
-            {/* Newsletter */}
-            <div className="flex gap-2 max-w-sm">
-              <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full pl-10 pr-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all"
-                />
-              </div>
-              <button className="px-4 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
           </div>
 
           {/* Platform */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Platform</h4>
+            <h4 className="text-[11px] font-medium text-text-tertiary uppercase tracking-[0.08em] mb-4">Platform</h4>
             <ul className="space-y-3">
               {footerLinks.platform.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 hover:text-white/80 transition-colors duration-200"
+                    className="text-sm text-text-secondary hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -112,13 +99,13 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Resources</h4>
+            <h4 className="text-[11px] font-medium text-text-tertiary uppercase tracking-[0.08em] mb-4">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 hover:text-white/80 transition-colors duration-200"
+                    className="text-sm text-text-secondary hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -129,13 +116,13 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+            <h4 className="text-[11px] font-medium text-text-tertiary uppercase tracking-[0.08em] mb-4">Legal</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 hover:text-white/80 transition-colors duration-200"
+                    className="text-sm text-text-secondary hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -148,15 +135,14 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-white/[0.06]">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-white/30">
-              © 2025 DataMind AI — Built for CSE Capstone Students
+            <p className="text-sm text-text-disabled">
+              © {new Date().getFullYear()} DataMind AI. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-sm text-white/30">
-              <span>Made with ❤️ using</span>
+            <div className="flex items-center gap-2 text-sm text-text-disabled">
               {["Next.js", "TypeScript", "Tailwind"].map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-0.5 text-xs font-medium bg-white/5 border border-white/10 rounded text-white/50"
+                  className="px-2 py-0.5 text-[11px] font-medium bg-white/[0.03] border border-white/[0.06] rounded text-text-tertiary"
                 >
                   {tech}
                 </span>
@@ -171,11 +157,11 @@ export function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: showTop ? 1 : 0 }}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-110 transition-all duration-300"
+        className="fixed bottom-8 right-8 z-40 w-10 h-10 rounded-lg bg-bg-elevated border border-white/[0.1] flex items-center justify-center text-text-secondary hover:text-white hover:border-white/[0.2] transition-all duration-200"
         style={{ pointerEvents: showTop ? "auto" : "none" }}
         aria-label="Back to top"
       >
-        <ArrowUp className="w-5 h-5" />
+        <ArrowUp className="w-4 h-4" />
       </motion.button>
     </footer>
   );

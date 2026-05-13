@@ -13,10 +13,10 @@ interface FadeInProps {
 }
 
 const directionMap = {
-  up: { y: 40, x: 0 },
-  down: { y: -40, x: 0 },
-  left: { x: 40, y: 0 },
-  right: { x: -40, y: 0 },
+  up: { y: 20, x: 0 },
+  down: { y: -20, x: 0 },
+  left: { x: 20, y: 0 },
+  right: { x: -20, y: 0 },
 };
 
 export function FadeIn({
@@ -28,7 +28,7 @@ export function FadeIn({
   once = true,
 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin: "-50px" });
+  const isInView = useInView(ref, { once, margin: "-80px" });
 
   const { x, y } = directionMap[direction];
 
@@ -40,7 +40,7 @@ export function FadeIn({
       transition={{
         duration,
         delay,
-        ease: [0.25, 0.4, 0.25, 1],
+        ease: [0.16, 1, 0.3, 1],
       }}
       className={className}
     >
@@ -59,11 +59,11 @@ interface StaggerContainerProps {
 export function StaggerContainer({
   children,
   className = "",
-  staggerDelay = 0.1,
+  staggerDelay = 0.08,
   once = true,
 }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin: "-50px" });
+  const isInView = useInView(ref, { once, margin: "-80px" });
 
   return (
     <motion.div
@@ -95,13 +95,13 @@ export function StaggerItem({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 16 },
         visible: {
           opacity: 1,
           y: 0,
           transition: {
             duration: 0.5,
-            ease: [0.25, 0.4, 0.25, 1],
+            ease: [0.16, 1, 0.3, 1],
           },
         },
       }}
